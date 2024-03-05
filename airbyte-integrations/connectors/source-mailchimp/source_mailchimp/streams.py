@@ -435,6 +435,36 @@ class Segments(MailChimpListSubStream):
     data_field = "segments"
 
 
+class GrowthHistory(MailChimpListSubStream):
+    cursor_field = "month"
+    data_field = "growth-history"
+
+    def stream_slices(self, stream_state: Mapping[str, Any] = None, **kwargs) -> Iterable[Optional[Mapping[str, Any]]]:
+        stream_state = stream_state or {}
+        parent = Lists(authenticator=self.authenticator).read_records(sync_mode=SyncMode.full_refresh)
+        for parent_record in parent:
+            slice = {"list_id": parent_record["id"]}
+            cursor_value = self.get_filter_date(self.start_date, stream_state.get(parent_record["id"], {}).get(self.cursor_field))
+            cursor_value = cursor_value if cursor_value is None else cursor_value[:7]
+            if cursor_value:
+                slice[self.filter_field] = cursor_value
+            yield slice
+
+    def next_page_token(self, response: requests.Response) -> Optional[Mapping[str, Any]]:
+        decoded_response = response.json()
+        api_data = decoded_response["history"]
+        if len(api_data) < self.page_size:
+            self.current_offset = 0
+            return None
+        else:
+            self.current_offset += self.page_size
+            return {"offset": self.current_offset}
+
+    def parse_response(self, response: requests.Response, **kwargs) -> Iterable[Mapping]:
+        response_json = response.json()
+        yield from response_json["history"]
+
+
 class Tags(MailChimpStream, HttpSubStream):
     """
     Get information about tags for a specific list.

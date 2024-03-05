@@ -29,6 +29,7 @@ from .streams import (
     Segments,
     Tags,
     Unsubscribes,
+    GrowthHistory,
 )
 
 
@@ -144,6 +145,7 @@ class SourceMailchimp(AbstractSource):
             Reports(authenticator=authenticator, start_date=start_date),
             SegmentMembers(authenticator=authenticator, start_date=start_date),
             Segments(authenticator=authenticator, start_date=start_date),
+            GrowthHistory(authenticator=authenticator, start_date=start_date),
             Tags(authenticator=authenticator, parent=lists),
             Unsubscribes(authenticator=authenticator, start_date=start_date, campaign_id=campaign_id),
         ]

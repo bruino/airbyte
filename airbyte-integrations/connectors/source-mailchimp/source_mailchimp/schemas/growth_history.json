@@ -1,0 +1,67 @@
+{
+    "type": "object",
+    "title": "Growth History",
+    "description": "View a summary of the month-by-month growth activity for a specific list.",
+    "properties": {
+        "list_id": {
+            "type": "string",
+            "title": "The unique id for the list.",
+            "description": "The unique id for the list."
+        },
+        "month": {
+            "type": "string",
+            "title": "The month that the growth history is describing.",
+            "description": "The month that the growth history is describing."
+        },
+        "existing": {
+            "type": "integer",
+            "title": "Deprected.",
+            "description": "Deprected."
+        },
+        "imports": {
+            "type": "integer",
+            "title": "Deprecated.",
+            "description": "Deprected."
+        },
+        "optins": {
+            "type": "integer",
+            "title": "Deprecated.",
+            "description": "Deprected."
+        },
+        "subscribed": {
+            "type": "integer",
+            "title": "Total subscribed members on the list at the end of the month.",
+            "description": "Total subscribed members on the list at the end of the month."
+        },
+        "unsubscribed": {
+            "type": "integer",
+            "title": "Newly unsubscribed members on the list for a specific month.",
+            "description": "Newly unsubscribed members on the list for a specific month."
+        },
+        "reconfirm": {
+            "type": "integer",
+            "title": "Newly reconfirmed members on the list for a specific month.",
+            "description": "Newly reconfirmed members on the list for a specific month."
+        },
+        "cleaned": {
+            "type": "integer",
+            "title": "Newly cleaned (hard-bounced) members on the list for a specific month.",
+            "description": "Newly cleaned (hard-bounced) members on the list for a specific month."
+        },
+        "pending": {
+            "type": "integer",
+            "title": "Pending members on the list for a specific month.",
+            "description": "Pending members on the list for a specific month."
+        },
+        "deleted": {
+            "type": "integer",
+            "title": "Newly deleted members on the list for a specific month.",
+            "description": "Newly deleted members on the list for a specific month."
+        },
+        "transactional": {
+            "type": "integer",
+            "title": "Subscribers that have been sent transactional emails via Mandrill.",
+            "description": "Subscribers that have been sent transactional emails via Mandrill."
+        }
+    }
+}
