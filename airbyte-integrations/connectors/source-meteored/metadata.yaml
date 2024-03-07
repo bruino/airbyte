@@ -1,0 +1,34 @@
+data:
+  allowedHosts:
+    hosts:
+      - TODO # Please change to the hostname of the source.
+  registries:
+    oss:
+      enabled: true
+    cloud:
+      enabled: false
+  remoteRegistries:
+    pypi:
+      enabled: true
+      packageName: airbyte-source-meteored
+  connectorBuildOptions:
+    # Please update to the latest version of the connector base image.
+    # https://hub.docker.com/r/airbyte/python-connector-base
+    # Please use the full address with sha256 hash to guarantee build reproducibility.
+    baseImage: docker.io/airbyte/python-connector-base:1.0.0@sha256:dd17e347fbda94f7c3abff539be298a65af2d7fc27a307d89297df1081a45c27
+  connectorSubtype: api
+  connectorType: source
+  definitionId: 6c1d0709-5da8-4085-a9dd-e4727917c4d0
+  dockerImageTag: 0.1.0
+  dockerRepository: airbyte/source-meteored
+  githubIssueLabel: source-meteored
+  icon: meteored.svg
+  license: MIT
+  name: Meteored
+  releaseDate: TODO
+  supportLevel: community
+  releaseStage: alpha
+  documentationUrl: https://docs.airbyte.com/integrations/sources/meteored
+  tags:
+    - language:python
+metadataSpecVersion: "1.0"

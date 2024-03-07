@@ -1,0 +1,288 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "status": {
+            "type": "integer"
+        },
+        "location": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string",
+            "format": "uri"
+        },
+        "day": {
+            "type": "object",
+            "patternProperties": {
+                "^[0-9]+$": {
+                    "type": "object",
+                    "properties": {
+                        "date": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "month": {
+                            "type": "string"
+                        },
+                        "symbol_value": {
+                            "type": "string"
+                        },
+                        "symbol_description": {
+                            "type": "string"
+                        },
+                        "symbol_value2": {
+                            "type": "string"
+                        },
+                        "symbol_description2": {
+                            "type": "string"
+                        },
+                        "tempmin": {
+                            "type": "string"
+                        },
+                        "tempmax": {
+                            "type": "string"
+                        },
+                        "wind": {
+                            "type": "object",
+                            "properties": {
+                                "speed": {
+                                    "type": "string"
+                                },
+                                "symbol": {
+                                    "type": "string"
+                                },
+                                "symbolB": {
+                                    "type": "string"
+                                },
+                                "gusts": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "speed",
+                                "symbol",
+                                "symbolB",
+                                "gusts"
+                            ]
+                        },
+                        "rain": {
+                            "type": "string"
+                        },
+                        "humidity": {
+                            "type": "string"
+                        },
+                        "pressure": {
+                            "type": "string"
+                        },
+                        "snowline": {
+                            "type": "string"
+                        },
+                        "uv_index_max": {
+                            "type": "string"
+                        },
+                        "sun": {
+                            "type": "object",
+                            "properties": {
+                                "in": {
+                                    "type": "string"
+                                },
+                                "mid": {
+                                    "type": "string"
+                                },
+                                "out": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "in",
+                                "mid",
+                                "out"
+                            ]
+                        },
+                        "moon": {
+                            "type": "object",
+                            "properties": {
+                                "in": {
+                                    "type": "string"
+                                },
+                                "out": {
+                                    "type": "string"
+                                },
+                                "lumi": {
+                                    "type": "string"
+                                },
+                                "desc": {
+                                    "type": "string"
+                                },
+                                "symbol": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "in",
+                                "out",
+                                "lumi",
+                                "desc",
+                                "symbol"
+                            ]
+                        },
+                        "units": {
+                            "type": "object",
+                            "properties": {
+                                "temp": {
+                                    "type": "string"
+                                },
+                                "wind": {
+                                    "type": "string"
+                                },
+                                "rain": {
+                                    "type": "string"
+                                },
+                                "pressure": {
+                                    "type": "string"
+                                },
+                                "snowline": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "temp",
+                                "wind",
+                                "rain",
+                                "pressure",
+                                "snowline"
+                            ]
+                        },
+                        "local_time": {
+                            "type": "string"
+                        },
+                        "local_time_offset": {
+                            "type": "integer"
+                        },
+                        "hour": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "interval": {
+                                        "type": "string"
+                                    },
+                                    "temp": {
+                                        "type": "string"
+                                    },
+                                    "symbol_value": {
+                                        "type": "string"
+                                    },
+                                    "symbol_description": {
+                                        "type": "string"
+                                    },
+                                    "symbol_value2": {
+                                        "type": "string"
+                                    },
+                                    "symbol_description2": {
+                                        "type": "string"
+                                    },
+                                    "wind": {
+                                        "type": "object",
+                                        "properties": {
+                                            "speed": {
+                                                "type": "string"
+                                            },
+                                            "dir": {
+                                                "type": "string"
+                                            },
+                                            "symbol": {
+                                                "type": "string"
+                                            },
+                                            "symbolB": {
+                                                "type": "string"
+                                            },
+                                            "gusts": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "speed",
+                                            "dir",
+                                            "symbol",
+                                            "symbolB",
+                                            "gusts"
+                                        ]
+                                    },
+                                    "rain": {
+                                        "type": "string"
+                                    },
+                                    "humidity": {
+                                        "type": "string"
+                                    },
+                                    "pressure": {
+                                        "type": "string"
+                                    },
+                                    "clouds": {
+                                        "type": "string"
+                                    },
+                                    "snowline": {
+                                        "type": "string"
+                                    },
+                                    "windchill": {
+                                        "type": "string"
+                                    },
+                                    "uv_index": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "interval",
+                                    "temp",
+                                    "symbol_value",
+                                    "symbol_description",
+                                    "symbol_value2",
+                                    "symbol_description2",
+                                    "wind",
+                                    "rain",
+                                    "humidity",
+                                    "pressure",
+                                    "clouds",
+                                    "snowline",
+                                    "windchill",
+                                    "uv_index"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "date",
+                        "name",
+                        "symbol_value",
+                        "symbol_description",
+                        "symbol_value2",
+                        "symbol_description2",
+                        "tempmin",
+                        "tempmax",
+                        "wind",
+                        "rain",
+                        "humidity",
+                        "pressure",
+                        "snowline",
+                        "uv_index_max",
+                        "sun",
+                        "moon",
+                        "units",
+                        "local_time",
+                        "local_time_offset",
+                        "hour"
+                    ]
+                }
+            }
+        }
+    },
+    "required": [
+        "status",
+        "location",
+        "url",
+        "day"
+    ]
+}

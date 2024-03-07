@@ -1,0 +1,989 @@
+{
+    "streams": [
+        {
+            "sync_mode": "full_refresh",
+            "destination_sync_mode": "overwrite",
+            "stream": {
+                "name": "localidades",
+                "supported_sync_modes": [
+                    "full_refresh"
+                ],
+                "source_defined_cursor": false,
+                "json_schema": {
+                    "type": "object",
+                    "properties": {
+                        "status": {
+                            "type": "integer"
+                        },
+                        "location": {
+                            "type": "string"
+                        },
+                        "url": {
+                            "type": "string"
+                        },
+                        "day": {
+                            "type": "object",
+                            "properties": {
+                                "1": {
+                                    "type": "object",
+                                    "properties": {
+                                        "date": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "month": {
+                                            "type": "string"
+                                        },
+                                        "symbol_value": {
+                                            "type": "string"
+                                        },
+                                        "symbol_description": {
+                                            "type": "string"
+                                        },
+                                        "symbol_value2": {
+                                            "type": "string"
+                                        },
+                                        "symbol_description2": {
+                                            "type": "string"
+                                        },
+                                        "tempmin": {
+                                            "type": "string"
+                                        },
+                                        "tempmax": {
+                                            "type": "string"
+                                        },
+                                        "wind": {
+                                            "type": "object",
+                                            "properties": {
+                                                "speed": {
+                                                    "type": "string"
+                                                },
+                                                "symbol": {
+                                                    "type": "string"
+                                                },
+                                                "symbolB": {
+                                                    "type": "string"
+                                                },
+                                                "gusts": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "rain": {
+                                            "type": "string"
+                                        },
+                                        "humidity": {
+                                            "type": "string"
+                                        },
+                                        "pressure": {
+                                            "type": "string"
+                                        },
+                                        "snowline": {
+                                            "type": "string"
+                                        },
+                                        "uv_index_max": {
+                                            "type": "string"
+                                        },
+                                        "sun": {
+                                            "type": "object",
+                                            "properties": {
+                                                "in": {
+                                                    "type": "string"
+                                                },
+                                                "mid": {
+                                                    "type": "string"
+                                                },
+                                                "out": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "moon": {
+                                            "type": "object",
+                                            "properties": {
+                                                "in": {
+                                                    "type": "string"
+                                                },
+                                                "out": {
+                                                    "type": "string"
+                                                },
+                                                "lumi": {
+                                                    "type": "string"
+                                                },
+                                                "desc": {
+                                                    "type": "string"
+                                                },
+                                                "symbol": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "units": {
+                                            "type": "object",
+                                            "properties": {
+                                                "temp": {
+                                                    "type": "string"
+                                                },
+                                                "wind": {
+                                                    "type": "string"
+                                                },
+                                                "rain": {
+                                                    "type": "string"
+                                                },
+                                                "pressure": {
+                                                    "type": "string"
+                                                },
+                                                "snowline": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "local_time": {
+                                            "type": "string"
+                                        },
+                                        "local_time_offset": {
+                                            "type": "integer"
+                                        },
+                                        "hour": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "interval": {
+                                                        "type": "string"
+                                                    },
+                                                    "temp": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_value": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_description": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_value2": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_description2": {
+                                                        "type": "string"
+                                                    },
+                                                    "wind": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "speed": {
+                                                                "type": "string"
+                                                            },
+                                                            "dir": {
+                                                                "type": "string"
+                                                            },
+                                                            "symbol": {
+                                                                "type": "string"
+                                                            },
+                                                            "symbolB": {
+                                                                "type": "string"
+                                                            },
+                                                            "gusts": {
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    },
+                                                    "rain": {
+                                                        "type": "string"
+                                                    },
+                                                    "humidity": {
+                                                        "type": "string"
+                                                    },
+                                                    "pressure": {
+                                                        "type": "string"
+                                                    },
+                                                    "clouds": {
+                                                        "type": "string"
+                                                    },
+                                                    "snowline": {
+                                                        "type": "string"
+                                                    },
+                                                    "windchill": {
+                                                        "type": "string"
+                                                    },
+                                                    "uv_index": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "2": {
+                                    "type": "object",
+                                    "properties": {
+                                        "date": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "month": {
+                                            "type": "string"
+                                        },
+                                        "symbol_value": {
+                                            "type": "string"
+                                        },
+                                        "symbol_description": {
+                                            "type": "string"
+                                        },
+                                        "symbol_value2": {
+                                            "type": "string"
+                                        },
+                                        "symbol_description2": {
+                                            "type": "string"
+                                        },
+                                        "tempmin": {
+                                            "type": "string"
+                                        },
+                                        "tempmax": {
+                                            "type": "string"
+                                        },
+                                        "wind": {
+                                            "type": "object",
+                                            "properties": {
+                                                "speed": {
+                                                    "type": "string"
+                                                },
+                                                "symbol": {
+                                                    "type": "string"
+                                                },
+                                                "symbolB": {
+                                                    "type": "string"
+                                                },
+                                                "gusts": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "rain": {
+                                            "type": "string"
+                                        },
+                                        "humidity": {
+                                            "type": "string"
+                                        },
+                                        "pressure": {
+                                            "type": "string"
+                                        },
+                                        "snowline": {
+                                            "type": "string"
+                                        },
+                                        "uv_index_max": {
+                                            "type": "string"
+                                        },
+                                        "sun": {
+                                            "type": "object",
+                                            "properties": {
+                                                "in": {
+                                                    "type": "string"
+                                                },
+                                                "mid": {
+                                                    "type": "string"
+                                                },
+                                                "out": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "moon": {
+                                            "type": "object",
+                                            "properties": {
+                                                "in": {
+                                                    "type": "string"
+                                                },
+                                                "out": {
+                                                    "type": "string"
+                                                },
+                                                "lumi": {
+                                                    "type": "string"
+                                                },
+                                                "desc": {
+                                                    "type": "string"
+                                                },
+                                                "symbol": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "units": {
+                                            "type": "object",
+                                            "properties": {
+                                                "temp": {
+                                                    "type": "string"
+                                                },
+                                                "wind": {
+                                                    "type": "string"
+                                                },
+                                                "rain": {
+                                                    "type": "string"
+                                                },
+                                                "pressure": {
+                                                    "type": "string"
+                                                },
+                                                "snowline": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "local_time": {
+                                            "type": "string"
+                                        },
+                                        "local_time_offset": {
+                                            "type": "integer"
+                                        },
+                                        "hour": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "interval": {
+                                                        "type": "string"
+                                                    },
+                                                    "temp": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_value": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_description": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_value2": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_description2": {
+                                                        "type": "string"
+                                                    },
+                                                    "wind": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "speed": {
+                                                                "type": "string"
+                                                            },
+                                                            "dir": {
+                                                                "type": "string"
+                                                            },
+                                                            "symbol": {
+                                                                "type": "string"
+                                                            },
+                                                            "symbolB": {
+                                                                "type": "string"
+                                                            },
+                                                            "gusts": {
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    },
+                                                    "rain": {
+                                                        "type": "string"
+                                                    },
+                                                    "humidity": {
+                                                        "type": "string"
+                                                    },
+                                                    "pressure": {
+                                                        "type": "string"
+                                                    },
+                                                    "clouds": {
+                                                        "type": "string"
+                                                    },
+                                                    "snowline": {
+                                                        "type": "string"
+                                                    },
+                                                    "windchill": {
+                                                        "type": "string"
+                                                    },
+                                                    "uv_index": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "3": {
+                                    "type": "object",
+                                    "properties": {
+                                        "date": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "month": {
+                                            "type": "string"
+                                        },
+                                        "symbol_value": {
+                                            "type": "string"
+                                        },
+                                        "symbol_description": {
+                                            "type": "string"
+                                        },
+                                        "symbol_value2": {
+                                            "type": "string"
+                                        },
+                                        "symbol_description2": {
+                                            "type": "string"
+                                        },
+                                        "tempmin": {
+                                            "type": "string"
+                                        },
+                                        "tempmax": {
+                                            "type": "string"
+                                        },
+                                        "wind": {
+                                            "type": "object",
+                                            "properties": {
+                                                "speed": {
+                                                    "type": "string"
+                                                },
+                                                "symbol": {
+                                                    "type": "string"
+                                                },
+                                                "symbolB": {
+                                                    "type": "string"
+                                                },
+                                                "gusts": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "rain": {
+                                            "type": "string"
+                                        },
+                                        "humidity": {
+                                            "type": "string"
+                                        },
+                                        "pressure": {
+                                            "type": "string"
+                                        },
+                                        "snowline": {
+                                            "type": "string"
+                                        },
+                                        "uv_index_max": {
+                                            "type": "string"
+                                        },
+                                        "sun": {
+                                            "type": "object",
+                                            "properties": {
+                                                "in": {
+                                                    "type": "string"
+                                                },
+                                                "mid": {
+                                                    "type": "string"
+                                                },
+                                                "out": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "moon": {
+                                            "type": "object",
+                                            "properties": {
+                                                "in": {
+                                                    "type": "string"
+                                                },
+                                                "out": {
+                                                    "type": "string"
+                                                },
+                                                "lumi": {
+                                                    "type": "string"
+                                                },
+                                                "desc": {
+                                                    "type": "string"
+                                                },
+                                                "symbol": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "units": {
+                                            "type": "object",
+                                            "properties": {
+                                                "temp": {
+                                                    "type": "string"
+                                                },
+                                                "wind": {
+                                                    "type": "string"
+                                                },
+                                                "rain": {
+                                                    "type": "string"
+                                                },
+                                                "pressure": {
+                                                    "type": "string"
+                                                },
+                                                "snowline": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "local_time": {
+                                            "type": "string"
+                                        },
+                                        "local_time_offset": {
+                                            "type": "integer"
+                                        },
+                                        "hour": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "interval": {
+                                                        "type": "string"
+                                                    },
+                                                    "temp": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_value": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_description": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_value2": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_description2": {
+                                                        "type": "string"
+                                                    },
+                                                    "wind": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "speed": {
+                                                                "type": "string"
+                                                            },
+                                                            "dir": {
+                                                                "type": "string"
+                                                            },
+                                                            "symbol": {
+                                                                "type": "string"
+                                                            },
+                                                            "symbolB": {
+                                                                "type": "string"
+                                                            },
+                                                            "gusts": {
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    },
+                                                    "rain": {
+                                                        "type": "string"
+                                                    },
+                                                    "humidity": {
+                                                        "type": "string"
+                                                    },
+                                                    "pressure": {
+                                                        "type": "string"
+                                                    },
+                                                    "clouds": {
+                                                        "type": "string"
+                                                    },
+                                                    "snowline": {
+                                                        "type": "string"
+                                                    },
+                                                    "windchill": {
+                                                        "type": "string"
+                                                    },
+                                                    "uv_index": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "4": {
+                                    "type": "object",
+                                    "properties": {
+                                        "date": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "month": {
+                                            "type": "string"
+                                        },
+                                        "symbol_value": {
+                                            "type": "string"
+                                        },
+                                        "symbol_description": {
+                                            "type": "string"
+                                        },
+                                        "symbol_value2": {
+                                            "type": "string"
+                                        },
+                                        "symbol_description2": {
+                                            "type": "string"
+                                        },
+                                        "tempmin": {
+                                            "type": "string"
+                                        },
+                                        "tempmax": {
+                                            "type": "string"
+                                        },
+                                        "wind": {
+                                            "type": "object",
+                                            "properties": {
+                                                "speed": {
+                                                    "type": "string"
+                                                },
+                                                "symbol": {
+                                                    "type": "string"
+                                                },
+                                                "symbolB": {
+                                                    "type": "string"
+                                                },
+                                                "gusts": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "rain": {
+                                            "type": "string"
+                                        },
+                                        "humidity": {
+                                            "type": "string"
+                                        },
+                                        "pressure": {
+                                            "type": "string"
+                                        },
+                                        "snowline": {
+                                            "type": "string"
+                                        },
+                                        "uv_index_max": {
+                                            "type": "string"
+                                        },
+                                        "sun": {
+                                            "type": "object",
+                                            "properties": {
+                                                "in": {
+                                                    "type": "string"
+                                                },
+                                                "mid": {
+                                                    "type": "string"
+                                                },
+                                                "out": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "moon": {
+                                            "type": "object",
+                                            "properties": {
+                                                "in": {
+                                                    "type": "string"
+                                                },
+                                                "out": {
+                                                    "type": "string"
+                                                },
+                                                "lumi": {
+                                                    "type": "string"
+                                                },
+                                                "desc": {
+                                                    "type": "string"
+                                                },
+                                                "symbol": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "units": {
+                                            "type": "object",
+                                            "properties": {
+                                                "temp": {
+                                                    "type": "string"
+                                                },
+                                                "wind": {
+                                                    "type": "string"
+                                                },
+                                                "rain": {
+                                                    "type": "string"
+                                                },
+                                                "pressure": {
+                                                    "type": "string"
+                                                },
+                                                "snowline": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "local_time": {
+                                            "type": "string"
+                                        },
+                                        "local_time_offset": {
+                                            "type": "integer"
+                                        },
+                                        "hour": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "interval": {
+                                                        "type": "string"
+                                                    },
+                                                    "temp": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_value": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_description": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_value2": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_description2": {
+                                                        "type": "string"
+                                                    },
+                                                    "wind": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "speed": {
+                                                                "type": "string"
+                                                            },
+                                                            "dir": {
+                                                                "type": "string"
+                                                            },
+                                                            "symbol": {
+                                                                "type": "string"
+                                                            },
+                                                            "symbolB": {
+                                                                "type": "string"
+                                                            },
+                                                            "gusts": {
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    },
+                                                    "rain": {
+                                                        "type": "string"
+                                                    },
+                                                    "humidity": {
+                                                        "type": "string"
+                                                    },
+                                                    "pressure": {
+                                                        "type": "string"
+                                                    },
+                                                    "clouds": {
+                                                        "type": "string"
+                                                    },
+                                                    "snowline": {
+                                                        "type": "string"
+                                                    },
+                                                    "windchill": {
+                                                        "type": "string"
+                                                    },
+                                                    "uv_index": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "5": {
+                                    "type": "object",
+                                    "properties": {
+                                        "date": {
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "month": {
+                                            "type": "string"
+                                        },
+                                        "symbol_value": {
+                                            "type": "string"
+                                        },
+                                        "symbol_description": {
+                                            "type": "string"
+                                        },
+                                        "symbol_value2": {
+                                            "type": "string"
+                                        },
+                                        "symbol_description2": {
+                                            "type": "string"
+                                        },
+                                        "tempmin": {
+                                            "type": "string"
+                                        },
+                                        "tempmax": {
+                                            "type": "string"
+                                        },
+                                        "wind": {
+                                            "type": "object",
+                                            "properties": {
+                                                "speed": {
+                                                    "type": "string"
+                                                },
+                                                "symbol": {
+                                                    "type": "string"
+                                                },
+                                                "symbolB": {
+                                                    "type": "string"
+                                                },
+                                                "gusts": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "rain": {
+                                            "type": "string"
+                                        },
+                                        "humidity": {
+                                            "type": "string"
+                                        },
+                                        "pressure": {
+                                            "type": "string"
+                                        },
+                                        "snowline": {
+                                            "type": "string"
+                                        },
+                                        "uv_index_max": {
+                                            "type": "string"
+                                        },
+                                        "sun": {
+                                            "type": "object",
+                                            "properties": {
+                                                "in": {
+                                                    "type": "string"
+                                                },
+                                                "mid": {
+                                                    "type": "string"
+                                                },
+                                                "out": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "moon": {
+                                            "type": "object",
+                                            "properties": {
+                                                "in": {
+                                                    "type": "string"
+                                                },
+                                                "out": {
+                                                    "type": "string"
+                                                },
+                                                "lumi": {
+                                                    "type": "string"
+                                                },
+                                                "desc": {
+                                                    "type": "string"
+                                                },
+                                                "symbol": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "units": {
+                                            "type": "object",
+                                            "properties": {
+                                                "temp": {
+                                                    "type": "string"
+                                                },
+                                                "wind": {
+                                                    "type": "string"
+                                                },
+                                                "rain": {
+                                                    "type": "string"
+                                                },
+                                                "pressure": {
+                                                    "type": "string"
+                                                },
+                                                "snowline": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "local_time": {
+                                            "type": "string"
+                                        },
+                                        "local_time_offset": {
+                                            "type": "integer"
+                                        },
+                                        "hour": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "interval": {
+                                                        "type": "string"
+                                                    },
+                                                    "temp": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_value": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_description": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_value2": {
+                                                        "type": "string"
+                                                    },
+                                                    "symbol_description2": {
+                                                        "type": "string"
+                                                    },
+                                                    "wind": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "speed": {
+                                                                "type": "string"
+                                                            },
+                                                            "dir": {
+                                                                "type": "string"
+                                                            },
+                                                            "symbol": {
+                                                                "type": "string"
+                                                            },
+                                                            "symbolB": {
+                                                                "type": "string"
+                                                            },
+                                                            "gusts": {
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    },
+                                                    "rain": {
+                                                        "type": "string"
+                                                    },
+                                                    "humidity": {
+                                                        "type": "string"
+                                                    },
+                                                    "pressure": {
+                                                        "type": "string"
+                                                    },
+                                                    "clouds": {
+                                                        "type": "string"
+                                                    },
+                                                    "snowline": {
+                                                        "type": "string"
+                                                    },
+                                                    "windchill": {
+                                                        "type": "string"
+                                                    },
+                                                    "uv_index": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
