@@ -439,6 +439,10 @@ class GrowthHistory(MailChimpListSubStream):
     cursor_field = "month"
     data_field = "growth-history"
 
+    def path(self, stream_slice: Mapping[str, Any] = None, **kwargs) -> str:
+        list_id = stream_slice.get("list_id")
+        return f"lists/{list_id}/{self.data_field}?count=1000"
+
     def stream_slices(self, stream_state: Mapping[str, Any] = None, **kwargs) -> Iterable[Optional[Mapping[str, Any]]]:
         stream_state = stream_state or {}
         parent = Lists(authenticator=self.authenticator).read_records(sync_mode=SyncMode.full_refresh)
